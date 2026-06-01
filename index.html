@@ -1,0 +1,1552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Genza — Creator-Led Launch Campaign Proposal | YoCreate</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+@font-face { font-family: 'Non Bureau'; src: url('assets/fonts/NonBureau-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Non Bureau'; src: url('assets/fonts/NonBureau-Medium.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Non Bureau'; src: url('assets/fonts/NonBureau-SemiBold.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Non Bureau'; src: url('assets/fonts/NonBureau-Bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --white: #FFFFFF;
+  --dark: #141416;
+  --dark-card: #1C1C1E;
+  --lime: #C8FF00;
+  --purple: #7C3AED;
+  --lavender: #EEEAFF;
+  --light-green: #F2FFD9;
+  --text: #141416;
+  --text-muted: #6B6B6B;
+  --border: #E5E5E5;
+  --heading: 'Non Bureau', -apple-system, sans-serif;
+  --sans: 'Montserrat', -apple-system, sans-serif;
+  --radius: 20px;
+  --radius-sm: 12px;
+  --max-width: 1280px;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 40px; }
+
+h1, h2, h3 { font-family: var(--heading); font-weight: 600; }
+h1 { font-size: clamp(2.2rem, 4.5vw, 3.6rem); line-height: 1.1; letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); line-height: 1.1; letter-spacing: -0.02em; }
+h3 { font-size: 1.2rem; line-height: 1.15; font-weight: 600; letter-spacing: -0.01em; }
+p { font-size: 0.92rem; line-height: 1.65; }
+
+.section { padding: 100px 0; }
+.section--dark { background: var(--dark); color: var(--white); }
+.section--lavender { background: var(--lavender); }
+.section--light-green { background: var(--light-green); }
+.section--gray { background: #F8F8F8; }
+
+.badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.badge--outline { border: 1px solid currentColor; }
+.badge--lime { background: var(--lime); color: var(--dark); }
+.badge--dark { background: var(--dark); color: var(--white); }
+
+/* ── PLACEHOLDER ── */
+.placeholder {
+  background: #F0F0F0;
+  border: 2px dashed #CCCCCC;
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #999;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 24px;
+}
+.placeholder svg { opacity: 0.4; }
+.placeholder-dark {
+  background: rgba(255,255,255,0.05);
+  border: 2px dashed rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.4);
+}
+
+/* ── NAV ── */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 16px 0;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  transition: transform 0.3s;
+}
+.nav--hidden { transform: translateY(-100%); }
+.nav__inner { display: flex; justify-content: space-between; align-items: center; }
+.nav__logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 0.9rem; }
+.nav__links { display: flex; gap: 28px; }
+.nav__link { font-size: 0.82rem; font-weight: 500; color: var(--text-muted); transition: color 0.2s; }
+.nav__link:hover { color: var(--text); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 0 80px;
+  overflow: hidden;
+  background: var(--dark);
+  color: var(--white);
+}
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: stretch;
+}
+.hero__subtitle {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.6);
+  margin-top: 20px;
+  max-width: 520px;
+  line-height: 1.7;
+}
+.hero__meta { display: flex; gap: 12px; margin-top: 40px; flex-wrap: wrap; }
+.hero__visual {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  min-height: 420px;
+  background: linear-gradient(135deg, #0a0a12 0%, #0d1528 40%, #111a30 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero__visual::before {
+  content: '';
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: radial-gradient(circle at 30% 70%, rgba(200,255,0,0.08) 0%, transparent 50%),
+              radial-gradient(circle at 70% 30%, rgba(120,80,255,0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+.hero__badge-row { display: flex; align-items: center; gap: 16px; margin-bottom: 32px; }
+
+/* ── METRICS ── */
+.metrics { padding: 80px 0; border-bottom: 1px solid var(--border); }
+.metrics__header { margin-bottom: 12px; }
+.metrics__desc { color: var(--text-muted); max-width: 640px; margin-bottom: 48px; font-size: 0.95rem; }
+.metrics__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.metrics__left { display: flex; flex-direction: column; gap: 20px; }
+.metrics__top-row { display: flex; gap: 20px; }
+.metrics__top-card {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+.metrics__top-card-label { font-size: 0.85rem; color: var(--text-muted); }
+.metrics__top-card-value { font-family: var(--sans); font-size: 1.6rem; font-weight: 800; }
+.kpi-list { display: flex; flex-direction: column; }
+.kpi-list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+.kpi-list__label { font-size: 0.95rem; color: var(--text-muted); }
+.kpi-list__value { font-weight: 800; font-size: 1.1rem; }
+.kpi-list__value--big { font-size: 2rem; }
+.metrics__right { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.metric-card {
+  padding: 28px;
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+.metric-card--dark { background: var(--dark-card); color: var(--white); }
+.metric-card--lime { background: var(--lime); color: var(--dark); }
+.metric-card__title { font-family: var(--sans); font-weight: 700; font-size: 1rem; margin-bottom: 8px; }
+.metric-card__desc { font-size: 0.82rem; opacity: 0.7; line-height: 1.5; }
+.metric-card__value { font-weight: 900; font-size: 2.2rem; margin-top: auto; font-family: var(--sans); }
+
+/* ── OBJECTIVE ── */
+.objective__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+.objective__text { font-size: 1rem; line-height: 1.8; color: var(--text-muted); }
+.objective__text p + p { margin-top: 20px; }
+.objective__text strong { color: var(--text); }
+.objective__highlight {
+  background: var(--lavender);
+  border-radius: var(--radius);
+  padding: 40px;
+}
+.objective__highlight blockquote {
+  font-family: var(--sans);
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.5;
+  font-style: normal;
+}
+
+/* ── AUDIENCE ── */
+.audience__top { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; margin-bottom: 60px; }
+.audience__icp-list { display: flex; flex-direction: column; gap: 20px; margin-top: 32px; }
+.audience__icp-item { display: flex; gap: 20px; align-items: flex-start; }
+.audience__icp-num {
+  width: 40px; height: 40px; min-width: 40px;
+  border-radius: 50%;
+  background: var(--dark);
+  color: var(--white);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 0.9rem;
+}
+.audience__icp-title { font-weight: 700; font-size: 1rem; margin-bottom: 4px; }
+.audience__icp-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
+.audience__right-block {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 40px;
+  box-shadow: 0 4px 40px rgba(0,0,0,0.06);
+}
+.audience__right-block h3 { font-family: var(--heading); font-size: 1.6rem; margin-bottom: 24px; font-weight: 600; }
+.persona-cards { display: flex; flex-direction: column; gap: 16px; }
+.persona-card { background: #F8F8F8; border-radius: var(--radius-sm); padding: 20px 24px; }
+.persona-card__name { font-weight: 700; margin-bottom: 4px; }
+.persona-card__desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; }
+
+/* ── WHY INFLUENCER ── */
+.why__header { max-width: 700px; margin-bottom: 60px; }
+.why__header p { color: var(--text-muted); margin-top: 16px; font-size: 0.95rem; }
+.why__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.why-card {
+  padding: 36px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+.why-card__num { font-weight: 800; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px; }
+.why-card__title { font-family: var(--sans); font-weight: 700; font-size: 1.05rem; margin-bottom: 12px; }
+.why-card__desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.65; }
+.why-card--accent {
+  background: var(--dark); color: var(--white);
+  border-color: var(--dark); grid-column: span 2;
+}
+.why-card--accent .why-card__num { color: rgba(255,255,255,0.35); }
+.why-card--accent .why-card__desc { color: rgba(255,255,255,0.65); }
+
+/* ── YOCREATE ── */
+.yc__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 48px; }
+.yc-card {
+  padding: 32px;
+  border-radius: var(--radius);
+  background: var(--white);
+  border: 1px solid var(--border);
+}
+.yc-card--dark { background: var(--dark); color: var(--white); border-color: var(--dark); }
+.yc-card--lime { background: var(--lime); color: var(--dark); border-color: var(--lime); }
+.yc-card__num { font-size: 0.8rem; font-weight: 700; opacity: 0.4; margin-bottom: 12px; letter-spacing: 0.04em; }
+.yc-card__title { font-weight: 700; font-size: 1.05rem; margin-bottom: 10px; }
+.yc-card__desc { font-size: 0.88rem; line-height: 1.65; opacity: 0.75; }
+
+/* ── CREATIVE ── */
+.creative__lead {
+  max-width: 780px;
+  margin-bottom: 64px;
+}
+.creative__lead p { font-size: 1rem; color: rgba(255,255,255,0.65); line-height: 1.8; margin-top: 16px; }
+.creative__lead strong { color: var(--lime); }
+.hypotheses { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 40px; }
+.hyp-card {
+  padding: 32px;
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.hyp-card__num { font-size: 0.78rem; font-weight: 700; color: var(--lime); letter-spacing: 0.06em; margin-bottom: 12px; }
+.hyp-card__title { font-weight: 700; font-size: 1rem; margin-bottom: 10px; color: var(--white); }
+.hyp-card__desc { font-size: 0.85rem; color: rgba(255,255,255,0.6); line-height: 1.65; }
+.hyp-card__platforms { margin-top: 16px; display: flex; gap: 8px; flex-wrap: wrap; }
+.hyp-tag {
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: rgba(200,255,0,0.12);
+  color: var(--lime);
+}
+.creative__hooks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 60px;
+}
+.hook-card {
+  padding: 28px;
+  border-radius: var(--radius-sm);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.hook-card__step { font-size: 2rem; font-weight: 900; color: var(--lime); margin-bottom: 12px; font-family: var(--sans); }
+.hook-card__title { font-weight: 700; font-size: 0.95rem; margin-bottom: 8px; color: var(--white); }
+.hook-card__desc { font-size: 0.83rem; color: rgba(255,255,255,0.55); line-height: 1.6; }
+
+/* ── PLATFORMS ── */
+.platforms__grid { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; }
+.platforms__sidebar {
+  background: var(--dark);
+  color: var(--white);
+  border-radius: var(--radius);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.platforms__icons { display: flex; gap: 14px; margin: 32px 0; flex-wrap: wrap; }
+.platforms__icon {
+  width: 52px; height: 52px;
+  border-radius: 14px;
+  background: var(--lime);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem;
+}
+.platforms__sidebar-text { font-size: 0.9rem; opacity: 0.65; line-height: 1.6; margin-top: auto; }
+.platforms__table-wrapper h3 {
+  font-family: var(--heading);
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+table.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+table.data-table thead th {
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  padding: 12px 16px;
+  border-bottom: 2px solid var(--dark);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+table.data-table tbody td {
+  padding: 18px 16px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+table.data-table tbody tr:last-child td { border-bottom: none; }
+table.data-table .cell-bold { font-weight: 700; }
+table.data-table .cell-big { font-weight: 800; font-size: 1.2rem; }
+.alloc-bar { height: 6px; background: var(--border); border-radius: 3px; margin-top: 8px; overflow: hidden; }
+.alloc-bar__fill { height: 100%; background: var(--lime); border-radius: 3px; }
+
+/* ── CREATORS ── */
+.creators__header { margin-bottom: 60px; }
+.creators__header p { color: var(--text-muted); margin-top: 12px; max-width: 620px; font-size: 0.95rem; }
+.creator-categories { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 72px; }
+.creator-cat { border-radius: var(--radius); padding: 28px 20px; }
+.creator-cat--dark { background: var(--dark); color: var(--white); }
+.creator-cat--lime { background: var(--lime); color: var(--dark); }
+.creator-cat--lavender { background: var(--lavender); color: var(--text); }
+.creator-cat--border { border: 1px solid var(--border); }
+.creator-cat__num { font-size: 0.78rem; opacity: 0.5; margin-bottom: 10px; font-weight: 600; letter-spacing: 0.04em; }
+.creator-cat__title { font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; }
+.creator-cat__angle { font-size: 0.8rem; opacity: 0.7; line-height: 1.5; font-style: italic; }
+
+.example-creators { display: flex; flex-direction: column; gap: 28px; }
+.example-creator {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  padding: 48px;
+  border-radius: var(--radius);
+  background: #F8F8F8;
+}
+.example-creator:nth-child(even) { direction: rtl; }
+.example-creator:nth-child(even) > * { direction: ltr; }
+.example-creator__img { border-radius: var(--radius-sm); overflow: hidden; }
+.example-creator__info h3 { font-family: var(--heading); font-size: 1.5rem; font-weight: 600; margin-bottom: 8px; }
+.example-creator__type { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px; }
+.example-creator__desc { font-size: 0.92rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px; }
+.creator-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: var(--lime);
+  color: var(--dark);
+  margin-bottom: 14px;
+}
+
+/* ── TRACKING ── */
+.tracking__grid { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; }
+.tracking__about {
+  background: var(--dark);
+  color: var(--white);
+  border-radius: var(--radius);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.tracking__about-icon {
+  width: 52px; height: 52px;
+  border-radius: 16px;
+  background: var(--lime);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 24px;
+  font-size: 1.4rem;
+}
+.tracking__about h3 { font-family: var(--heading); font-size: 1.4rem; font-weight: 600; margin-bottom: 16px; }
+.tracking__about p { font-size: 0.9rem; opacity: 0.65; line-height: 1.65; }
+.tracking__methods h3 { font-family: var(--heading); font-size: 1.8rem; font-weight: 600; margin-bottom: 32px; }
+.tracking__metrics { margin-top: 40px; }
+.tracking__metrics h4 { font-family: var(--heading); font-size: 1.1rem; font-weight: 600; margin-bottom: 16px; }
+.tracking__metrics-grid { display: flex; gap: 10px; flex-wrap: wrap; }
+.tracking__metric-pill {
+  padding: 10px 20px;
+  border-radius: 100px;
+  background: var(--dark);
+  color: var(--white);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+.tracking__note {
+  margin-top: 32px;
+  padding: 24px 28px;
+  background: var(--lavender);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--text);
+}
+
+/* ── BUDGET ── */
+.budget__header { margin-bottom: 48px; }
+.budget__header p { color: rgba(255,255,255,0.6); margin-top: 12px; max-width: 640px; font-size: 0.95rem; }
+.budget__layout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.budget__table-wrap {
+  background: rgba(255,255,255,0.05);
+  border-radius: var(--radius);
+  padding: 32px;
+  overflow-x: auto;
+}
+.budget__table-wrap h3 { font-family: var(--heading); font-weight: 600; font-size: 1.3rem; margin-bottom: 24px; }
+table.dark-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+table.dark-table thead th {
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.4);
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+table.dark-table tbody td {
+  padding: 14px 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.85);
+}
+table.dark-table tbody tr:last-child td {
+  border-bottom: none;
+  font-weight: 700;
+  color: var(--white);
+}
+table.dark-table .td-bold { font-weight: 700; color: var(--white); }
+table.dark-table .td-lime { color: var(--lime); font-weight: 700; }
+.budget__cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.budget-card {
+  border-radius: var(--radius);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 180px;
+}
+.budget-card--glass { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); color: var(--white); }
+.budget-card--lime { background: var(--lime); color: var(--dark); }
+.budget-card__title { font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; }
+.budget-card__desc { font-size: 0.78rem; opacity: 0.65; line-height: 1.5; }
+.budget-card__value { font-weight: 900; font-size: 2rem; margin-top: auto; font-family: var(--sans); }
+.budget__kpi-full {
+  margin-top: 40px;
+  background: rgba(255,255,255,0.04);
+  border-radius: var(--radius);
+  padding: 32px;
+  overflow-x: auto;
+}
+.budget__kpi-full h3 { font-family: var(--heading); font-size: 1.4rem; font-weight: 600; margin-bottom: 24px; }
+.budget__note { margin-top: 24px; font-size: 0.82rem; opacity: 0.45; line-height: 1.6; }
+
+/* ── TIMELINE ── */
+.timeline__gantt {
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  overflow-x: auto;
+}
+.gantt-table { width: 100%; min-width: 700px; border-collapse: collapse; }
+.gantt-table thead th {
+  padding: 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+  background: var(--dark);
+  color: var(--white);
+}
+.gantt-table thead th:first-child { text-align: left; }
+.gantt-table tbody td {
+  padding: 20px 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+.gantt-table tbody td:first-child { font-weight: 600; }
+.gantt-table tbody tr:last-child td { border-bottom: none; }
+.gantt-bar { height: 28px; border-radius: 8px; display: block; }
+.gantt-bar--lime { background: var(--lime); }
+.gantt-bar--purple { background: #B8A3FF; opacity: 0.6; }
+.gantt-bar--purple-solid { background: #7C5CFC; }
+.timeline__summary {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-top: 40px;
+}
+.timeline__week { padding: 20px; border-radius: var(--radius-sm); background: #F8F8F8; }
+.timeline__week-num { font-weight: 800; font-size: 0.85rem; margin-bottom: 8px; }
+.timeline__week-desc { font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; }
+
+/* ── CTA ── */
+.cta { padding: 120px 0; text-align: center; }
+.cta h2 { margin-bottom: 16px; }
+.cta__sub { color: var(--text-muted); font-size: 1rem; margin-bottom: 60px; max-width: 600px; margin-left: auto; margin-right: auto; }
+.cta__steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto 60px;
+}
+.cta__step-num {
+  width: 40px; height: 40px;
+  border-radius: 12px;
+  background: var(--lime);
+  color: var(--dark);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 0.9rem;
+  margin-bottom: 14px;
+}
+.cta__step-text { font-size: 0.88rem; line-height: 1.55; font-weight: 500; text-align: left; }
+.cta__contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--dark);
+  color: var(--white);
+  padding: 20px 40px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* ── FOOTER ── */
+.footer {
+  padding: 40px 0;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+/* ── ANIMATIONS ── */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .container { padding: 0 24px; }
+  .hero__grid { grid-template-columns: 1fr; gap: 40px; }
+  .metrics__grid { grid-template-columns: 1fr; }
+  .metrics__right { grid-template-columns: 1fr 1fr; }
+  .objective__grid { grid-template-columns: 1fr; gap: 40px; }
+  .audience__top { grid-template-columns: 1fr; gap: 40px; }
+  .why__grid { grid-template-columns: 1fr; }
+  .why-card--accent { grid-column: span 1; }
+  .platforms__grid { grid-template-columns: 1fr; }
+  .creator-categories { grid-template-columns: repeat(2, 1fr); }
+  .example-creator { grid-template-columns: 1fr; gap: 24px; padding: 32px; }
+  .example-creator:nth-child(even) { direction: ltr; }
+  .tracking__grid { grid-template-columns: 1fr; }
+  .budget__layout { grid-template-columns: 1fr; }
+  .budget__cards { grid-template-columns: 1fr 1fr; }
+  .timeline__summary { grid-template-columns: repeat(3, 1fr); }
+  .cta__steps { grid-template-columns: repeat(2, 1fr); }
+  .nav__links { display: none; }
+  .yc__grid { grid-template-columns: 1fr; }
+  .hypotheses { grid-template-columns: 1fr; }
+  .creative__hooks { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .section { padding: 64px 0; }
+  .metrics__top-row { flex-direction: column; }
+  .metrics__right { grid-template-columns: 1fr; }
+  .creator-categories { grid-template-columns: 1fr; }
+  .budget__cards { grid-template-columns: 1fr; }
+  .timeline__summary { grid-template-columns: 1fr 1fr; }
+  .cta__steps { grid-template-columns: 1fr; }
+  .creative__hooks { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="container nav__inner">
+    <div class="nav__logo">
+      <img src="assets/yocreate-logo.png" alt="YoCreate" style="width:32px;height:32px;border-radius:8px;">
+      YoCreate
+    </div>
+    <div class="nav__links">
+      <a href="#objective" class="nav__link">Objective</a>
+      <a href="#audience" class="nav__link">Audience</a>
+      <a href="#yocreate" class="nav__link">Why Us</a>
+      <a href="#creative" class="nav__link">Creative</a>
+      <a href="#platforms" class="nav__link">Platforms</a>
+      <a href="#creators" class="nav__link">Creators</a>
+      <a href="#budget" class="nav__link">Budget & KPI</a>
+      <a href="#timeline" class="nav__link">Timeline</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero__grid">
+      <div>
+        <div class="hero__badge-row">
+          <img src="assets/yocreate-logo.png" alt="YoCreate" style="width:44px;height:44px;border-radius:12px;">
+          <span style="font-size:1.4rem;color:rgba(255,255,255,0.3);font-weight:300;">&times;</span>
+          <img src="genza-logo.png" alt="Genza" style="height:28px;width:auto;">
+        </div>
+        <h1>Creator-Led Launch Campaign for Genza</h1>
+        <p class="hero__subtitle">A $50,000 US test campaign to validate influencer marketing as a growth channel — TikTok-led, Gen Z–targeted, game-first creative.</p>
+        <div class="hero__meta">
+          <span class="badge badge--outline" style="border-color:rgba(255,255,255,0.3);color:rgba(255,255,255,0.6);">Confidential</span>
+          <span class="badge badge--outline" style="border-color:rgba(255,255,255,0.3);color:rgba(255,255,255,0.6);">June 2026</span>
+          <span class="badge badge--lime">$50,000</span>
+        </div>
+      </div>
+
+      <div class="hero__visual">
+        <img src="cover.jpg" alt="Campus life" style="width:100%;height:100%;object-fit:cover;position:relative;z-index:1;">
+        <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,10,18,0.45) 0%,rgba(80,40,160,0.25) 100%);z-index:2;"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KEY METRICS -->
+<section class="metrics reveal" id="metrics">
+  <div class="container">
+    <h2 class="metrics__header">Campaign at a glance</h2>
+    <p class="metrics__desc">Key parameters of the pilot campaign. Conservative Tier-1 (US) benchmarks for reach, CTR, and conversion.</p>
+    <div class="metrics__grid">
+      <div class="metrics__left">
+        <div class="metrics__top-row">
+          <div class="metrics__top-card">
+            <div>
+              <div class="metrics__top-card-label">Creators / placements</div>
+              <div class="metrics__top-card-value">~30–38 / 46</div>
+            </div>
+          </div>
+          <div class="metrics__top-card">
+            <div>
+              <div class="metrics__top-card-label">Duration</div>
+              <div class="metrics__top-card-value">5 weeks</div>
+            </div>
+          </div>
+        </div>
+        <div class="kpi-list">
+          <div class="kpi-list__item">
+            <span class="kpi-list__label">Total clicks</span>
+            <span class="kpi-list__value">~17,500</span>
+          </div>
+          <div class="kpi-list__item">
+            <span class="kpi-list__label">Average CPC</span>
+            <span class="kpi-list__value">$2.85</span>
+          </div>
+          <div class="kpi-list__item">
+            <span class="kpi-list__label">App installs (target action)</span>
+            <span class="kpi-list__value">~2,300</span>
+          </div>
+          <div class="kpi-list__item">
+            <span class="kpi-list__label">Forecast reach / impressions</span>
+            <span class="kpi-list__value kpi-list__value--big">~1,640,000</span>
+          </div>
+        </div>
+      </div>
+      <div class="metrics__right">
+        <div class="metric-card metric-card--dark">
+          <div>
+            <div class="metric-card__title">Platforms</div>
+            <div class="metric-card__desc">TikTok (60%), Instagram (25%), YouTube (15%)</div>
+          </div>
+          <div class="metric-card__value">3</div>
+        </div>
+        <div class="metric-card metric-card--dark">
+          <div>
+            <div class="metric-card__title">Target geos</div>
+            <div class="metric-card__desc">United States — Los Angeles & New York priority</div>
+          </div>
+          <div class="metric-card__value">US</div>
+        </div>
+        <div class="metric-card metric-card--dark">
+          <div>
+            <div class="metric-card__title">Average CPI</div>
+            <div class="metric-card__desc">Per qualified US app install</div>
+          </div>
+          <div class="metric-card__value">$21.66</div>
+        </div>
+        <div class="metric-card metric-card--lime">
+          <svg style="position:absolute;top:16px;right:16px;opacity:0.15;" width="60" height="40" viewBox="0 0 60 40" fill="none"><polyline points="0,38 10,32 20,28 30,20 40,22 50,12 60,5" stroke="#141416" stroke-width="2" fill="none"/></svg>
+          <div>
+            <div class="metric-card__title">Total budget</div>
+            <div class="metric-card__desc">Agency fee included, 5-week pilot</div>
+          </div>
+          <div class="metric-card__value">$50,000</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OBJECTIVE -->
+<section class="section reveal" id="objective">
+  <div class="container">
+    <div class="objective__grid">
+      <div>
+        <h2>Campaign objective</h2>
+        <div class="objective__text" style="margin-top:28px;">
+          <p>Genza's goal for this campaign is to <strong>validate creator-led distribution as an acquisition channel</strong> ahead of a larger US push. The product is launching its app and its influencer marketing simultaneously — with no prior creator campaigns to learn from.</p>
+          <p>This test is designed to generate that learning: which platforms, creator profiles, and creative angles produce <strong>qualified, low-cost installs</strong> for Genza in the US.</p>
+          <p>Performance ads alone are expensive and easy to ignore in the dating/social space. Creators give Genza what paid media can't buy at launch: native context, social proof, and a playful first impression at scale.</p>
+        </div>
+      </div>
+      <div class="objective__highlight">
+        <blockquote>"The goal isn't reach. It's proving — cheaply and quickly — that the right creators and the right angle can turn curiosity into qualified installs."</blockquote>
+        <div style="margin-top:32px;display:flex;flex-direction:column;gap:12px;">
+          <div style="display:flex;gap:12px;align-items:flex-start;">
+            <div style="width:32px;height:32px;min-width:32px;border-radius:8px;background:var(--dark);display:flex;align-items:center;justify-content:center;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--lime)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <p style="font-size:0.88rem;line-height:1.6;"><strong>Not a dating app campaign.</strong> Genza is positioned as a playful social game — protecting brand safety while matching how Gen Z actually behaves.</p>
+          </div>
+          <div style="display:flex;gap:12px;align-items:flex-start;">
+            <div style="width:32px;height:32px;min-width:32px;border-radius:8px;background:var(--dark);display:flex;align-items:center;justify-content:center;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--lime)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <p style="font-size:0.88rem;line-height:1.6;"><strong>Every placement is an experiment.</strong> High creator volume produces creative variation; we scale what converts.</p>
+          </div>
+          <div style="display:flex;gap:12px;align-items:flex-start;">
+            <div style="width:32px;height:32px;min-width:32px;border-radius:8px;background:var(--dark);display:flex;align-items:center;justify-content:center;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--lime)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <p style="font-size:0.88rem;line-height:1.6;"><strong>18+ audience only.</strong> All targeting, creator selection, and creative is built around an adult audience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIENCE -->
+<section class="section section--lavender reveal" id="audience">
+  <div class="container">
+    <div class="audience__top">
+      <div>
+        <h2>Target audience</h2>
+        <p style="margin-top:16px;color:var(--text-muted);font-size:0.95rem;">Gen Z adults (18+) in the US — students and young adults who download things because they're fun.</p>
+        <div class="audience__icp-list">
+          <div class="audience__icp-item">
+            <div class="audience__icp-num">1</div>
+            <div>
+              <div class="audience__icp-title">College students (18–22)</div>
+              <div class="audience__icp-desc">On-campus young adults building new social circles. Heavy TikTok use, strong word-of-mouth behavior. The natural early-adopter core.</div>
+            </div>
+          </div>
+          <div class="audience__icp-item">
+            <div class="audience__icp-num">2</div>
+            <div>
+              <div class="audience__icp-title">Young urban adults (22–27)</div>
+              <div class="audience__icp-desc">Working young adults in LA and NY, socially active, trend-aware, comfortable trying new apps. Higher disposable attention for novelty and games.</div>
+            </div>
+          </div>
+          <div class="audience__icp-item">
+            <div class="audience__icp-num">3</div>
+            <div>
+              <div class="audience__icp-title">Bilingual / Spanish-speaking adults</div>
+              <div class="audience__icp-desc">A large, engaged segment concentrated in Los Angeles. Best reached through Spanish-language creators and longer-form YouTube content.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="audience__right-block">
+        <h3>Buyer personas</h3>
+        <div class="persona-cards">
+          <div class="persona-card">
+            <div class="persona-card__name">🎓 The Campus Trendsetter</div>
+            <div class="persona-card__desc">19-year-old in LA — always first to try the app her friends are talking about. Would download Genza because the AI character made her laugh, not because it's a dating app.</div>
+          </div>
+          <div class="persona-card">
+            <div class="persona-card__name">🎮 The Curious Gamer</div>
+            <div class="persona-card__desc">23-year-old in NY who plays cozy/sim games. The Tamagotchi-style farm and quests are his hook; matching is a bonus he discovers inside.</div>
+          </div>
+          <div class="persona-card">
+            <div class="persona-card__name">🌎 The Bilingual Connector</div>
+            <div class="persona-card__desc">21-year-old bilingual student in LA. Finds new apps through Spanish-speaking YouTubers and TikTokers who explain things properly. Converts best when a trusted creator walks through the app.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY INFLUENCER MARKETING -->
+<section class="section reveal" id="why">
+  <div class="container">
+    <div class="why__header">
+      <h2>Why influencer marketing fits Genza</h2>
+      <p>Four structural reasons creator-led distribution is the right channel for a brand-new social app entering a competitive US market.</p>
+    </div>
+    <div class="why__grid">
+      <div class="why-card">
+        <div class="why-card__num">01</div>
+        <div class="why-card__title">A brand-new product needs trusted introductions</div>
+        <div class="why-card__desc">Genza has no brand equity in the US yet. Creators provide an instant, credible introduction — a familiar voice vouching for a new app — which lowers the trust barrier that a cold paid ad can't.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-card__num">02</div>
+        <div class="why-card__title">Playful mechanics are made to be shown, not described</div>
+        <div class="why-card__desc">The AI character, the farm game, and the "AI picks your match" reveal are visual, fun, and inherently shareable. Creator content shows the experience in action far better than a banner or pre-roll.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-card__num">03</div>
+        <div class="why-card__title">TikTok rewards native, creator-led formats</div>
+        <div class="why-card__desc">Genza's social-game angle fits TikTok's native patterns — POV, skits, reactions, duets. Creator content can earn organic distribution beyond the paid placement when the format lands.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-card__num">04</div>
+        <div class="why-card__title">Creator content fuels paid amplification later</div>
+        <div class="why-card__desc">The best-performing creator videos become ready-made ad creative for TikTok Spark Ads and Instagram Partnership Ads in the next phase — so this test also produces a creative library, not just installs.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY YOCREATE -->
+<section class="section section--gray reveal" id="yocreate">
+  <div class="container">
+    <div style="max-width:700px;margin-bottom:16px;">
+      <h2>Why YoCreate</h2>
+      <p style="color:var(--text-muted);margin-top:16px;font-size:0.95rem;">A data-driven influencer marketing agency that builds creator-led launch campaigns for consumer apps in competitive markets — with a focus on audience-validated creator selection and full-funnel measurement.</p>
+    </div>
+    <div class="yc__grid">
+      <div class="yc-card yc-card--dark">
+        <div class="yc-card__num">01</div>
+        <div class="yc-card__title">Audience-Led Creator Selection</div>
+        <div class="yc-card__desc">We select creators based on verified audience data — geo (US, LA/NY), age (18+), language (English/Spanish) — not follower counts. Every creator is screened so views come from people who can actually install and use Genza.</div>
+      </div>
+      <div class="yc-card">
+        <div class="yc-card__num">02</div>
+        <div class="yc-card__title">Built for Creative Testing</div>
+        <div class="yc-card__desc">This campaign is structured as an experiment. A micro-heavy creator pool produces a high volume of creative variations across angles, so we can find what converts before scaling spend behind it.</div>
+      </div>
+      <div class="yc-card">
+        <div class="yc-card__num">03</div>
+        <div class="yc-card__title">Analytics-Driven Execution</div>
+        <div class="yc-card__desc">Full-funnel tracking via deep links (AppsFlyer/Adjust), unique promo codes, and UTMs. Creator-level attribution lets us compare performance in real time and reallocate budget to winners mid-flight.</div>
+      </div>
+      <div class="yc-card yc-card--lime">
+        <div class="yc-card__num">04</div>
+        <div class="yc-card__title">Scalable Delivery</div>
+        <div class="yc-card__desc">This is a $50,000 pilot. Our sourcing, negotiation, briefing, QA, and reporting infrastructure scales to a full US growth program once the channel and the winning angles are validated.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREATIVE CONCEPT -->
+<section class="section section--dark reveal" id="creative">
+  <div class="container">
+    <div class="creative__lead">
+      <h2>Creative concept</h2>
+      <p>Genza is sold as a <strong>playful social game with an AI character at its center</strong> — not a dating app. Every placement opens with curiosity and entertainment, then routes interested viewers to a low-friction install. The promise: <strong>fun and novelty first, connection second.</strong></p>
+    </div>
+
+    <div class="creative__hooks">
+      <div class="hook-card">
+        <div class="hook-card__step">1</div>
+        <div class="hook-card__title">The AI character</div>
+        <div class="hook-card__desc">A personality people want to watch and react to. The curiosity hook that stops the scroll.</div>
+      </div>
+      <div class="hook-card">
+        <div class="hook-card__step">2</div>
+        <div class="hook-card__title">"AI picked my match" reveal</div>
+        <div class="hook-card__desc">An instant, on-camera payoff creators can perform. The entertainment hook that drives shares.</div>
+      </div>
+      <div class="hook-card">
+        <div class="hook-card__step">3</div>
+        <div class="hook-card__title">Launch perk for new users</div>
+        <div class="hook-card__desc">In-app reward / early-access status that gives the creator a concrete reason to say "download now."</div>
+      </div>
+    </div>
+
+    <div style="margin-top:64px;margin-bottom:28px;">
+      <h3 style="color:var(--white);font-size:1.5rem;">Creative hypotheses — 4 angles to test</h3>
+    </div>
+    <div class="hypotheses">
+      <div class="hyp-card">
+        <div class="hyp-card__num">HYPOTHESIS 01</div>
+        <div class="hyp-card__title">"The AI that lives in the real world"</div>
+        <div class="hyp-card__desc">POV / skit content where the AI character does human things, reacts to the real world, and is "looking for connection." Hook is curiosity, not dating. Tests: does the character drive curiosity-led installs?</div>
+        <div class="hyp-card__platforms">
+          <span class="hyp-tag">TikTok</span>
+          <span class="hyp-tag">Comedy/POV creators</span>
+        </div>
+      </div>
+      <div class="hyp-card">
+        <div class="hyp-card__num">HYPOTHESIS 02</div>
+        <div class="hyp-card__title">"Raise your match" — Tamagotchi angle</div>
+        <div class="hyp-card__desc">Lead with the in-app farm/pet game and daily quests. Frame Genza as a cozy social game you check daily, where matching is a fun layer. Tests: does game-first framing convert cozy-game audiences?</div>
+        <div class="hyp-card__platforms">
+          <span class="hyp-tag">TikTok</span>
+          <span class="hyp-tag">YouTube</span>
+          <span class="hyp-tag">Cozy-game creators</span>
+        </div>
+      </div>
+      <div class="hyp-card">
+        <div class="hyp-card__num">HYPOTHESIS 03</div>
+        <div class="hyp-card__title">"I let an AI pick my match"</div>
+        <div class="hyp-card__desc">Creators take the questionnaire on camera and react to who the AI matches them with — playful, reaction-driven, low-stakes. Strong duet/stitch potential. Tests: does the reveal mechanic drive shares?</div>
+        <div class="hyp-card__platforms">
+          <span class="hyp-tag">TikTok</span>
+          <span class="hyp-tag">Comedy/lifestyle creators</span>
+        </div>
+      </div>
+      <div class="hyp-card">
+        <div class="hyp-card__num">HYPOTHESIS 04</div>
+        <div class="hyp-card__title">"The app everyone on campus is trying"</div>
+        <div class="hyp-card__desc">Social-proof / FOMO angle from college creators — it's the fun new thing friends are doing together. Positions Genza as a group activity, not a solo dating download. Tests: does social proof drive the student core?</div>
+        <div class="hyp-card__platforms">
+          <span class="hyp-tag">TikTok</span>
+          <span class="hyp-tag">Instagram</span>
+          <span class="hyp-tag">College creators</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLATFORMS -->
+<section class="section reveal" id="platforms">
+  <div class="container">
+    <div style="margin-bottom:48px;">
+      <h2>Platforms & creator mix</h2>
+    </div>
+    <div class="platforms__grid">
+      <div class="platforms__sidebar">
+        <h3 style="font-family:var(--heading);font-size:1.6rem;font-weight:600;">Platform strategy</h3>
+        <div class="platforms__icons">
+          <div class="platforms__icon" title="TikTok">🎵</div>
+          <div class="platforms__icon" title="Instagram">📷</div>
+          <div class="platforms__icon" title="YouTube">▶️</div>
+        </div>
+        <p class="platforms__sidebar-text">TikTok is the primary discovery and creative-testing engine. Instagram reinforces identity and trust. YouTube explains mechanics in depth — especially for the Spanish-speaking LA audience.</p>
+      </div>
+      <div class="platforms__table-wrapper">
+        <h3>Channel allocation</h3>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Platform</th>
+              <th>Why</th>
+              <th>Alloc.</th>
+              <th>Placements</th>
+              <th>Creator mix</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="cell-bold">TikTok</td>
+              <td>Best fit for Gen Z; ideal for playful/viral social-game mechanics; fast creative testing; organic upside</td>
+              <td>
+                <span class="cell-bold">60%</span>
+                <div class="alloc-bar"><div class="alloc-bar__fill" style="width:60%"></div></div>
+              </td>
+              <td class="cell-big">32</td>
+              <td>27 micro, 5 midi</td>
+            </tr>
+            <tr>
+              <td class="cell-bold">Instagram</td>
+              <td>Central to students' social life; lifestyle and visual identity; sustains trust and recall after TikTok contact</td>
+              <td>
+                <span class="cell-bold">25%</span>
+                <div class="alloc-bar"><div class="alloc-bar__fill" style="width:25%"></div></div>
+              </td>
+              <td class="cell-big">12</td>
+              <td>10 micro, 2 midi</td>
+            </tr>
+            <tr>
+              <td class="cell-bold">YouTube</td>
+              <td>Explains mechanics in depth; strong with Spanish-speaking audience; especially relevant in Los Angeles</td>
+              <td>
+                <span class="cell-bold">15%</span>
+                <div class="alloc-bar"><div class="alloc-bar__fill" style="width:15%"></div></div>
+              </td>
+              <td class="cell-big">2</td>
+              <td>1 micro, 1 midi</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="margin-top:20px;font-size:0.82rem;color:var(--text-muted);line-height:1.6;">Many creators will deliver across more than one platform, so unique partners (~30–38) will be fewer than total placements (~46).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREATORS -->
+<section class="section reveal" id="creators">
+  <div class="container">
+    <div class="creators__header">
+      <h2>Creator profiles & examples</h2>
+      <p>Four creator categories, each combining a profile, representative examples of the type we'd source, and why they fit the strategy. Named creators are illustrative — the validated shortlist is delivered once direction is confirmed.</p>
+    </div>
+
+    <div class="creator-categories">
+      <div class="creator-cat creator-cat--dark">
+        <div class="creator-cat__num">CATEGORY 01</div>
+        <div class="creator-cat__title">Gen Z lifestyle & college creators</div>
+        <div class="creator-cat__angle">Day-in-the-life, campus, relatable young-adult creators with 18+ US audiences in LA/NY</div>
+      </div>
+      <div class="creator-cat creator-cat--lime">
+        <div class="creator-cat__num">CATEGORY 02</div>
+        <div class="creator-cat__title">Comedy / POV / skit creators</div>
+        <div class="creator-cat__angle">Character-driven, shareable short-form creators with strong view-to-follower ratios</div>
+      </div>
+      <div class="creator-cat creator-cat--border">
+        <div class="creator-cat__num">CATEGORY 03</div>
+        <div class="creator-cat__title">Cozy-game & AI-curiosity creators</div>
+        <div class="creator-cat__angle">Gaming, sim/cozy-game, and "look at this weird AI" creators on TikTok and YouTube</div>
+      </div>
+      <div class="creator-cat creator-cat--lavender">
+        <div class="creator-cat__num">CATEGORY 04</div>
+        <div class="creator-cat__title">Bilingual / Spanish-speaking creators</div>
+        <div class="creator-cat__angle">English-Spanish creators concentrated in the LA market; strong on YouTube and TikTok</div>
+      </div>
+    </div>
+
+    <div class="example-creators">
+
+      <!-- EXAMPLE 1 — Ashley Soto -->
+      <div class="example-creator">
+        <div class="example-creator__img">
+          <img src="creator-ashley-soto.png" alt="Ashley Soto @ash_lay TikTok" style="width:100%;border-radius:var(--radius-sm);box-shadow:0 8px 40px rgba(0,0,0,0.1);">
+        </div>
+        <div class="example-creator__info">
+          <span class="creator-tag">Gen Z Lifestyle · TikTok</span>
+          <h3>Ashley Soto</h3>
+          <div class="example-creator__type">@ash_lay · Day-in-the-life · GRWM · College culture</div>
+          <p class="example-creator__desc">9.5M followers · <strong>13.19% ER</strong> · ~56K avg views. Audience: 70% US, 81% aged 18–34 (61% are 18–24), 84% female, English-first. A mega-reach voice squarely in the core student/young-adult segment — exceptional 13% engagement rate makes her one of the most cost-efficient large creators on TikTok.</p>
+          <div style="display:flex;gap:24px;margin-top:16px;flex-wrap:wrap;">
+            <div><div style="font-weight:800;font-size:1.1rem;">9.5M</div><div style="font-size:0.78rem;color:var(--text-muted);">Followers</div></div>
+            <div><div style="font-weight:800;font-size:1.1rem;color:#2C5F2D;">13.19%</div><div style="font-size:0.78rem;color:var(--text-muted);">Engagement rate</div></div>
+            <div><div style="font-weight:800;font-size:1.1rem;">70% US</div><div style="font-size:0.78rem;color:var(--text-muted);">Audience geo</div></div>
+            <div><div style="font-weight:800;font-size:1.1rem;">81%</div><div style="font-size:0.78rem;color:var(--text-muted);">Aged 18–34</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EXAMPLE 2 — ItzDanny -->
+      <div class="example-creator">
+        <div class="example-creator__img">
+          <img src="creator-itzdanny.png" alt="ItzDanny @itzdanooo TikTok" style="width:100%;border-radius:var(--radius-sm);box-shadow:0 8px 40px rgba(0,0,0,0.1);">
+        </div>
+        <div class="example-creator__info">
+          <span class="creator-tag">Comedy / POV · TikTok</span>
+          <h3>ItzDanny</h3>
+          <div class="example-creator__type">@itzdanooo · "The Fresh Prince of Chicago" · Character-driven skits</div>
+          <p class="example-creator__desc">711.8K followers · <strong>7.23% ER</strong> · ~9.3K avg views, rising. Audience: 87% US, 84% aged 18–34, 87% female, 99.5% English. Comedic, character-led content with near-pure US/English audience — ideal for performing the "AI picked my match" reveal and POV skits. Strong duet/stitch potential.</p>
+          <div style="display:flex;gap:24px;margin-top:16px;flex-wrap:wrap;">
+            <div><div style="font-weight:800;font-size:1.1rem;">711K</div><div style="font-size:0.78rem;color:var(--text-muted);">Followers</div></div>
+            <div><div style="font-weight:800;font-size:1.1rem;color:#2C5F2D;">7.23%</div><div style="font-size:0.78rem;color:var(--text-muted);">Engagement rate</div></div>
+            <div><div style="font-weight:800;font-size:1.1rem;">87% US</div><div style="font-size:0.78rem;color:var(--text-muted);">Audience geo</div></div>
+            <div><div style="font-weight:800;font-size:1.1rem;">99.5%</div><div style="font-size:0.78rem;color:var(--text-muted);">English audience</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EXAMPLE 3 — LaurenZside -->
+      <div class="example-creator">
+        <div class="example-creator__img">
+          <img src="creator-laurenzside.png" alt="LaurenZside @laurenzsideyt TikTok" style="width:100%;border-radius:var(--radius-sm);box-shadow:0 8px 40px rgba(0,0,0,0.1);">
+        </div>
+        <div class="example-creator__info">
+          <span class="creator-tag">Cozy Game · AI Curiosity · TikTok + YouTube</span>
+          <h3>LaurenZside</h3>
+          <div class="example-creator__type">@laurenzsideyt · Sim & cozy games · Playful content creator</div>
+          <p class="example-creator__desc">4.5M followers · <strong>7.68% ER</strong> · ~1.1M avg views (growing). Audience: 61% US, 81% aged 18–34, 76% female, 94% English. Established gaming creator with a loyal, playful audience — perfect for the game-first framing (Tamagotchi farm, quests, "AI matches you") for a gaming-native audience at massive per-post reach.</p>
+          <div style="display:flex;gap:24px;margin-top:16px;flex-wrap:wrap;">
+            <div><div style="font-weight:800;font-size:1.1rem;">4.5M</div><div style="font-size:0.78rem;color:var(--text-muted);">Followers</div></div>
+            <div><div style="font-weight:800;font-size:1.1rem;color:#2C5F2D;">7.68%</div><div style="font-size:0.78rem;color:var(--text-muted);">Engagement rate</div></div>
+            <div><div style="font-weight:800;font-size:1.1rem;">~1.1M</div><div style="font-size:0.78rem;color:var(--text-muted);">Avg views</div></div>
+            <div><div style="font-weight:800;font-size:1.1rem;">61% US</div><div style="font-size:0.78rem;color:var(--text-muted);">Audience geo</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EXAMPLE 4 — El Lobo -->
+      <div class="example-creator">
+        <div class="example-creator__img">
+          <img src="creator-el-lobo.png" alt="El Lobo @ellobooficial23 TikTok" style="width:100%;border-radius:var(--radius-sm);box-shadow:0 8px 40px rgba(0,0,0,0.1);">
+        </div>
+        <div class="example-creator__info">
+          <span class="creator-tag">Bilingual · Spanish · TikTok</span>
+          <h3>El Lobo</h3>
+          <div class="example-creator__type">@ellobooficial23 · Spanish-dominant · US-Latino audience</div>
+          <p class="example-creator__desc">~1M followers · <strong>3.38% ER</strong> · ~86K avg views. Audience: 72% US, 84% aged 18–34, Spanish-dominant (84% Spanish / 16% English), male-skewing (~88%), only 2.5% under 18. Delivers genuine Spanish-language reach into the US-Latino segment at near-million scale — ideal for the LA market with a male skew that balances the female-heavy creators above.</p>
+          <div style="display:flex;gap:24px;margin-top:16px;flex-wrap:wrap;">
+            <div><div style="font-weight:800;font-size:1.1rem;">~1M</div><div style="font-size:0.78rem;color:var(--text-muted);">Followers</div></div>
+            <div><div style="font-weight:800;font-size:1.1rem;color:#2C5F2D;">3.38%</div><div style="font-size:0.78rem;color:var(--text-muted);">Engagement rate</div></div>
+            <div><div style="font-weight:800;font-size:1.1rem;">72% US</div><div style="font-size:0.78rem;color:var(--text-muted);">Audience geo</div></div>
+            <div><div style="font-weight:800;font-size:1.1rem;">84% ES</div><div style="font-size:0.78rem;color:var(--text-muted);">Spanish audience</div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TRACKING -->
+<section class="section section--gray reveal" id="tracking">
+  <div class="container">
+    <div style="margin-bottom:48px;max-width:700px;">
+      <h2>Tracking & measurement</h2>
+    </div>
+    <div class="tracking__grid">
+      <div class="tracking__about">
+        <div class="tracking__about-icon">📊</div>
+        <h3>Attribution approach</h3>
+        <p>Full-funnel tracking via deep links (AppsFlyer/Adjust), unique promo codes per creator, and UTMs. Creator-level attribution lets us compare performance in real time and reallocate budget to winners mid-flight.</p>
+      </div>
+      <div class="tracking__methods">
+        <h3>What we measure</h3>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>Source</th>
+              <th>Who provides</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="cell-bold">Reach & views</td>
+              <td>Platform analytics, creator reports</td>
+              <td>YoCreate</td>
+            </tr>
+            <tr>
+              <td class="cell-bold">Engagement (likes, comments, shares)</td>
+              <td>Platform analytics</td>
+              <td>YoCreate</td>
+            </tr>
+            <tr>
+              <td class="cell-bold">Clicks</td>
+              <td>Trackable bio/description links + unique codes</td>
+              <td>YoCreate</td>
+            </tr>
+            <tr>
+              <td class="cell-bold">App installs</td>
+              <td>AppsFlyer / Adjust deep links</td>
+              <td>Client access required</td>
+            </tr>
+            <tr>
+              <td class="cell-bold">Registrations & questionnaire completions</td>
+              <td>App dashboard / analytics</td>
+              <td>Client access required</td>
+            </tr>
+            <tr>
+              <td class="cell-bold">CPI / CPA by creator</td>
+              <td>Combined attribution</td>
+              <td>Client access required</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="tracking__note">
+          <strong>Note:</strong> Installs, registrations, and CPI/CPA happen inside Genza's product and analytics. We can report on these — and tie them to individual creators — if the client provides access to their analytics platform (AppsFlyer/Adjust, app dashboards).
+        </div>
+        <div class="tracking__metrics" style="margin-top:32px;">
+          <h4>Secondary KPIs tracked</h4>
+          <div class="tracking__metrics-grid">
+            <span class="tracking__metric-pill">Engagement rate</span>
+            <span class="tracking__metric-pill">Creator-level CPC</span>
+            <span class="tracking__metric-pill">Platform comparison</span>
+            <span class="tracking__metric-pill">Organic uplift</span>
+            <span class="tracking__metric-pill">Promo code redemptions</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BUDGET & KPI -->
+<section class="section section--dark reveal" id="budget">
+  <div class="container">
+    <div class="budget__header">
+      <h2>Budget & KPI forecast</h2>
+      <p>$50,000 total, agency fee included. Split 60% TikTok / 25% Instagram / 15% YouTube. Conservative Tier-1 (US) benchmarks — real influencer-driven performance is typically higher for a free social app.</p>
+    </div>
+    <div class="budget__layout">
+      <div class="budget__table-wrap">
+        <h3>Budget split by platform</h3>
+        <table class="dark-table">
+          <thead>
+            <tr>
+              <th>Platform</th>
+              <th>Budget</th>
+              <th>Share</th>
+              <th>Placements</th>
+              <th>Breakdown</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="td-bold">TikTok</td>
+              <td>$30,000</td>
+              <td class="td-lime">60%</td>
+              <td>32</td>
+              <td>27 micro, 5 midi</td>
+            </tr>
+            <tr>
+              <td class="td-bold">Instagram</td>
+              <td>$12,500</td>
+              <td class="td-lime">25%</td>
+              <td>12</td>
+              <td>10 micro, 2 midi</td>
+            </tr>
+            <tr>
+              <td class="td-bold">YouTube</td>
+              <td>$7,500</td>
+              <td class="td-lime">15%</td>
+              <td>2</td>
+              <td>1 micro, 1 midi</td>
+            </tr>
+            <tr>
+              <td>Total</td>
+              <td>$50,000</td>
+              <td>100%</td>
+              <td>46</td>
+              <td>38 micro, 8 midi</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="budget__cards">
+        <div class="budget-card budget-card--glass">
+          <div>
+            <div class="budget-card__title">Forecast reach</div>
+            <div class="budget-card__desc">Total impressions across all platforms</div>
+          </div>
+          <div class="budget-card__value">~1.64M</div>
+        </div>
+        <div class="budget-card budget-card--glass">
+          <div>
+            <div class="budget-card__title">Total clicks</div>
+            <div class="budget-card__desc">Trackable clicks to app store</div>
+          </div>
+          <div class="budget-card__value">~17,500</div>
+        </div>
+        <div class="budget-card budget-card--glass">
+          <div>
+            <div class="budget-card__title">App installs</div>
+            <div class="budget-card__desc">Qualified US installs (conservative floor)</div>
+          </div>
+          <div class="budget-card__value">~2,300</div>
+        </div>
+        <div class="budget-card budget-card--lime">
+          <div>
+            <div class="budget-card__title">Average CPI</div>
+            <div class="budget-card__desc">Per qualified US app install</div>
+          </div>
+          <div class="budget-card__value">$21.66</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="budget__kpi-full">
+      <h3>Full KPI breakdown</h3>
+      <table class="dark-table">
+        <thead>
+          <tr>
+            <th>Platform</th>
+            <th>Budget</th>
+            <th>CPM</th>
+            <th>Reach</th>
+            <th>CTR</th>
+            <th>Clicks</th>
+            <th>CPC</th>
+            <th>Install CVR</th>
+            <th>Installs</th>
+            <th>CPI</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="td-bold">TikTok</td>
+            <td>$30,000</td>
+            <td>$25</td>
+            <td>1,200,000</td>
+            <td>1.0%</td>
+            <td>12,000</td>
+            <td>$2.50</td>
+            <td>12.0%</td>
+            <td>1,440</td>
+            <td>$20.83</td>
+          </tr>
+          <tr>
+            <td class="td-bold">Instagram</td>
+            <td>$12,500</td>
+            <td>$35</td>
+            <td>357,143</td>
+            <td>1.2%</td>
+            <td>4,286</td>
+            <td>$2.92</td>
+            <td>15.0%</td>
+            <td>643</td>
+            <td>$19.44</td>
+          </tr>
+          <tr>
+            <td class="td-bold">YouTube</td>
+            <td>$7,500</td>
+            <td>$90</td>
+            <td>83,333</td>
+            <td>1.5%</td>
+            <td>1,250</td>
+            <td>$6.00</td>
+            <td>18.0%</td>
+            <td>225</td>
+            <td>$33.33</td>
+          </tr>
+          <tr>
+            <td>Total</td>
+            <td>$50,000</td>
+            <td>—</td>
+            <td>1,640,476</td>
+            <td>—</td>
+            <td>17,536</td>
+            <td>$2.85</td>
+            <td>—</td>
+            <td>2,308</td>
+            <td>$21.66</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="budget__note">Forecasts use conservative Tier-1 (US) benchmarks. Target action = a qualified US app install. Click-to-install CVR is set as a deliberate floor for a free, low-friction social app — real influencer-driven rates are typically higher.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="section reveal" id="timeline">
+  <div class="container">
+    <div style="margin-bottom:48px;max-width:700px;">
+      <h2>Campaign timeline</h2>
+      <p style="color:var(--text-muted);margin-top:12px;font-size:0.95rem;">A tight 5-week test. Sourcing and approvals run in parallel; publications cluster in weeks 3–4; week 5 is reporting and a scale recommendation.</p>
+    </div>
+    <div class="timeline__gantt">
+      <table class="gantt-table">
+        <thead>
+          <tr>
+            <th>Phase</th>
+            <th>Week 1</th>
+            <th>Week 2</th>
+            <th>Week 3</th>
+            <th>Week 4</th>
+            <th>Week 5</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Kickoff & briefing</td>
+            <td><span class="gantt-bar gantt-bar--lime"></span></td>
+            <td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td>Creator sourcing & validation</td>
+            <td><span class="gantt-bar gantt-bar--lime"></span></td>
+            <td><span class="gantt-bar gantt-bar--lime"></span></td>
+            <td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td>Negotiations & contracts</td>
+            <td></td>
+            <td><span class="gantt-bar gantt-bar--purple"></span></td>
+            <td><span class="gantt-bar gantt-bar--purple"></span></td>
+            <td></td><td></td>
+          </tr>
+          <tr>
+            <td>Creative briefing & approval</td>
+            <td></td>
+            <td><span class="gantt-bar gantt-bar--purple"></span></td>
+            <td><span class="gantt-bar gantt-bar--purple"></span></td>
+            <td><span class="gantt-bar gantt-bar--purple"></span></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Publications & launches</td>
+            <td></td><td></td>
+            <td><span class="gantt-bar gantt-bar--purple-solid"></span></td>
+            <td><span class="gantt-bar gantt-bar--purple-solid"></span></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Reporting & scale recommendation</td>
+            <td></td><td></td><td></td><td></td>
+            <td><span class="gantt-bar gantt-bar--lime"></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="timeline__summary">
+      <div class="timeline__week">
+        <div class="timeline__week-num">Week 1</div>
+        <div class="timeline__week-desc">Kickoff, finalize messaging and angles, begin creator outreach against the validated shortlist</div>
+      </div>
+      <div class="timeline__week">
+        <div class="timeline__week-num">Week 2</div>
+        <div class="timeline__week-desc">Complete outreach, contract creators, brief and approve first creative wave</div>
+      </div>
+      <div class="timeline__week">
+        <div class="timeline__week-num">Week 3</div>
+        <div class="timeline__week-desc">First wave of publications; approve and queue wave two</div>
+      </div>
+      <div class="timeline__week">
+        <div class="timeline__week-num">Week 4</div>
+        <div class="timeline__week-desc">Second wave of publications; mid-flight optimization toward early winners</div>
+      </div>
+      <div class="timeline__week">
+        <div class="timeline__week-num">Week 5</div>
+        <div class="timeline__week-desc">Compile creator- and platform-level report; recommend what to scale for phase 2</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta reveal" id="cta">
+  <div class="container">
+    <h2>Ready to launch</h2>
+    <p class="cta__sub">This proposal outlines a $50,000 creator-led test designed to prove influencer marketing as a qualified-install channel for Genza in the US. The next step is a 30-minute alignment call.</p>
+    <div class="cta__steps">
+      <div>
+        <div class="cta__step-num">1</div>
+        <div class="cta__step-text">30-min alignment call — confirm creative angles, target-action definition, and tracking setup</div>
+      </div>
+      <div>
+        <div class="cta__step-num">2</div>
+        <div class="cta__step-text">Lock the creator shortlist — validated, named list by category delivered once direction is confirmed</div>
+      </div>
+      <div>
+        <div class="cta__step-num">3</div>
+        <div class="cta__step-text">Confirm tracking setup — validate deep links and promo-code attribution before launch</div>
+      </div>
+      <div>
+        <div class="cta__step-num">4</div>
+        <div class="cta__step-text">Align on messaging guidelines — approved claims, social-game positioning, and do-not-use list</div>
+      </div>
+      <div>
+        <div class="cta__step-num">5</div>
+        <div class="cta__step-text">Begin creator outreach within 48 hours of alignment</div>
+      </div>
+    </div>
+    <div class="cta__contact">
+      <img src="assets/yocreate-logo.png" alt="YoCreate" style="width:32px;height:32px;border-radius:8px;">
+      <span>YoCreate Agency · m.karpov@yocreate.com</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <p>YoCreate Agency · Confidential · 2026 · Prepared for Genza</p>
+  </div>
+</footer>
+
+<script>
+// Scroll-triggered reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Hide/show nav on scroll
+let lastY = 0;
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  nav.classList.toggle('nav--hidden', y > lastY && y > 80);
+  lastY = y;
+});
+</script>
+</body>
+</html>
